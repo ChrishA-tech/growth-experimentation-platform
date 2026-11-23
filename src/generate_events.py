@@ -79,9 +79,10 @@ def main():
 
     users.to_parquet("data/users.parquet", index=False)
     events.to_parquet("data/events.parquet", index=False)
+    act_c = users.loc[users.variant == "control", "activated"].mean()
+    act_t = users.loc[users.variant == "treatment", "activated"].mean()
     print(f"users={len(users):,}  events={len(events):,}  "
-          f"activation(control)={users.query('variant==\"control\"').activated.mean():.3f}  "
-          f"activation(treatment)={users.query('variant==\"treatment\"').activated.mean():.3f}")
+          f"activation(control)={act_c:.3f}  activation(treatment)={act_t:.3f}")
 
 
 if __name__ == "__main__":
