@@ -9,9 +9,12 @@ Covers the full experimentation toolkit a growth DS is expected to own:
 Writes reports/experiment.json with every figure the README and CV cite.
 """
 import json
+import os
 import numpy as np
 import pandas as pd
 from scipy import stats
+
+os.makedirs("reports", exist_ok=True)
 
 Z = stats.norm.ppf
 

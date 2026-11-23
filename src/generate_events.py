@@ -8,9 +8,11 @@ a pre-experiment spend covariate used later for CUPED variance reduction.
 Output: data/events.parquet  (one row per event)  and  data/users.parquet (one row per user)
 Deterministic (seed=42) so CI and the README numbers match.
 """
+import os
 import numpy as np
 import pandas as pd
 
+os.makedirs("data", exist_ok=True)
 SEED = 42
 N_USERS = 40_000
 ACTIVATION_BASE = 0.42       # control activation probability

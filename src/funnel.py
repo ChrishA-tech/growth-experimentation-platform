@@ -4,7 +4,10 @@ Computes the acquisition -> activation -> retention -> expansion funnel (overall
 by variant) and weekly signup-cohort retention. Writes reports/funnel.json.
 """
 import json
+import os
 import pandas as pd
+
+os.makedirs("reports", exist_ok=True)
 
 
 def funnel(u):
