@@ -1,0 +1,17 @@
+# Two targets, identical models. `dev` runs the warehouse on DuckDB (CI, laptops);
+# `prod` runs the exact same SQL on Google BigQuery. Switch with `dbt build -t prod`.
+growth_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/warehouse.duckdb
+      threads: 4
+    prod:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT', 'my-gcp-project') }}"
+      dataset: growth_marts
+      location: EU
+      threads: 8
+      priority: interactive

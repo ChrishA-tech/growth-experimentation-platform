@@ -1,0 +1,19 @@
+{
+  "n_per_arm": 19991,
+  "primary_metric": "activation_rate",
+  "control_activation": 0.4177,
+  "treatment_activation": 0.4768,
+  "activation_lift_pp": 5.91,
+  "p_value": 0.0,
+  "bootstrap_ci_pp": [
+    4.91,
+    6.85
+  ],
+  "mde_pp_at_80pct_power": 1.39,
+  "revenue_effect_naive": 0.196,
+  "revenue_effect_cuped": 0.175,
+  "cuped_variance_reduction_pct": 15.3,
+  "msprt_stop_signup_day": 2,
+  "msprt_users_at_stop": 4242,
+  "fixed_horizon_users": 40000
+}

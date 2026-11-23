@@ -1,0 +1,8 @@
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+pyarrow>=14
+duckdb>=0.10
+dbt-duckdb>=1.7
+streamlit>=1.30
+pytest>=7.4

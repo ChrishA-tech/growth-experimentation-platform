@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: stg_events
+    description: Typed, deduplicated product events from the Pub/Sub topic.
+    columns:
+      - name: user_id
+        tests: [not_null]
+      - name: variant
+        tests:
+          - accepted_values: {values: ["control", "treatment"]}
+  - name: funnel_by_variant
+    description: Growth funnel (activation/retention/expansion) per experiment arm.
+    columns:
+      - name: variant
+        tests: [not_null, unique]
+      - name: activation_rate
+        tests: [not_null]

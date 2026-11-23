@@ -1,0 +1,11 @@
+name: growth_warehouse
+version: "1.0.0"
+config-version: 2
+profile: growth_warehouse
+model-paths: ["models"]
+models:
+  growth_warehouse:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

@@ -1,0 +1,70 @@
+{
+  "overall_stages": {
+    "signups": 40000,
+    "activated": 17890,
+    "retained_d7": 9858,
+    "expanded": 2897
+  },
+  "overall_rates": {
+    "activation_rate": 0.4472,
+    "retention_rate_of_activated": 0.551,
+    "expansion_rate_of_retained": 0.2939,
+    "signup_to_paid": 0.0724
+  },
+  "by_variant": {
+    "control": {
+      "stages": {
+        "signups": 19991,
+        "activated": 8350,
+        "retained_d7": 4612,
+        "expanded": 1380
+      },
+      "rates": {
+        "activation_rate": 0.4177,
+        "retention_rate_of_activated": 0.5523,
+        "expansion_rate_of_retained": 0.2992,
+        "signup_to_paid": 0.069
+      }
+    },
+    "treatment": {
+      "stages": {
+        "signups": 20009,
+        "activated": 9540,
+        "retained_d7": 5246,
+        "expanded": 1517
+      },
+      "rates": {
+        "activation_rate": 0.4768,
+        "retention_rate_of_activated": 0.5499,
+        "expansion_rate_of_retained": 0.2892,
+        "signup_to_paid": 0.0758
+      }
+    }
+  },
+  "weekly_cohorts": [
+    {
+      "cohort_week": 0,
+      "signups": 9953,
+      "activation_rate": 0.4443,
+      "paid_rate": 0.0692
+    },
+    {
+      "cohort_week": 1,
+      "signups": 9994,
+      "activation_rate": 0.4405,
+      "paid_rate": 0.0726
+    },
+    {
+      "cohort_week": 2,
+      "signups": 10032,
+      "activation_rate": 0.457,
+      "paid_rate": 0.0751
+    },
+    {
+      "cohort_week": 3,
+      "signups": 10021,
+      "activation_rate": 0.4472,
+      "paid_rate": 0.0727
+    }
+  ]
+}
